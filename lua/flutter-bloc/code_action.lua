@@ -109,8 +109,8 @@ local function apply_template(template, widget_content)
     for _, line in ipairs(template) do
         local start_pos, end_pos = line:find("%%s")
         if start_pos then
-            before_separator = string.sub(line, 1, start_pos - 1)
-            after_separator = string.sub(line, end_pos + 1)
+            local before_separator = string.sub(line, 1, start_pos - 1)
+            local after_separator = string.sub(line, end_pos + 1)
 
             table.insert(result, before_separator)
 
